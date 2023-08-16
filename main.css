@@ -1,0 +1,206 @@
+/* Krisam Byanju */
+/* Krisam Byanju */
+/* 230210 */
+/* Reset default styles and apply box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up the background and font */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: top center;
+  color: #FFF;
+}
+
+/* Create a container for the entire app */
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+/* Style the header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+}
+
+header input, header button {
+  flex: 1;
+  max-width: 280px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid #DF8E00;
+  color: #313131;
+  font-size: 20px;
+  font-weight: 300;
+  transition: background-color 0.2s ease-out;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+header input:focus, header button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Style the main content */
+main {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.location {
+  margin-bottom: 10px;
+}
+
+.location .city {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.location .date {
+  font-size: 16px;
+}
+
+.current .temp {
+  font-size: 102px;
+  font-weight: 900;
+  margin: 30px 0;
+  text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.current .temp span {
+  font-weight: 500;
+}
+
+.current .weather {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low {
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.current .icon img {
+  height: 100px;
+}
+
+.current .wind-humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.current .wind, .current .humidity {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.current .wind .icon,
+.current .humidity .icon {
+  margin-right: 10px;
+  height: 24px;
+}
+
+.current .wind span,
+.current .humidity span {
+  font-weight: 500;
+}
+
+/* Style the forecast display */
+.forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Style the forecast form */
+#forecast-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#forecast-form button {
+  flex: 1;
+  max-width: 250px; /* Increased max-width */
+  padding: 12px 20px; /* Increased padding */
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid #DF8E00;
+  color: #313131;
+  font-size: 22px; /* Increased font size */
+  font-weight: 300;
+  transition: background-color 0.2s ease-out;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#forecast-form button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* Add styles for the forecast display */
+.forecast {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment */
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  flex-wrap: wrap; /* Allow wrapping of forecast items */
+}
+
+/* Adjust forecast item styles */
+.forecast-item {
+  width: calc(33.33% - 10px); /* Adjust width for three items in a row */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid #DF8E00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Adjust styles for day of the week */
+.forecast-item .day {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* Adjust styles for forecast icon */
+.forecast-icon {
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* Adjust styles for temperature */
+.forecast-item .temperature {
+  font-weight: 500;
+}
